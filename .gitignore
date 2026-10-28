@@ -1,0 +1,12 @@
+# Ignorar todo el contenido de esta carpeta por defecto.
+/*
+
+# Archivos del brochure que sí deben versionarse.
+!/.gitignore
+!/SOIX_CV.pdf
+!/soix-portada.html
+!/soix.html
+
+# Material de referencia del proyecto.
+!/Ejemplos/
+!/Ejemplos/**
