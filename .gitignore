@@ -1,12 +1,25 @@
 # Ignorar todo el contenido de esta carpeta por defecto.
 /*
 
-# Archivos del brochure que sí deben versionarse.
+# Archivos y carpetas del brochure corporativo que sí deben versionarse.
 !/.gitignore
-!/SOIX_CV.pdf
-!/soix-portada.html
+!/LICENSE
+!/index.html
 !/soix.html
+!/soix-portada.html
+!/cv.html
+!/SOIX_CV.pdf
+!/css/
+!/css/**
 
-# Material de referencia del proyecto.
+# Recursos y assets de soporte
+!/Logos SOIX/
+!/Logos SOIX/**
+!/LOGOS DE LAS EMPRESAS/
+!/LOGOS DE LAS EMPRESAS/**
+!/GALERIA/
+!/GALERIA/**
+!/DC3 Y CAPACITACIONES/
+!/DC3 Y CAPACITACIONES/**
 !/Ejemplos/
 !/Ejemplos/**

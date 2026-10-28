@@ -1,0 +1,727 @@
+/* ==========================================================================
+   SOIX SOLUTIONS — CORPORATE BROCHURE STYLESHEET
+   Optimizado para visualización web y exportación a PDF en hojas tamaño Carta (8.5in x 11in)
+   ========================================================================== */
+
+:root {
+  --navy: #092b46;
+  --navy-dark: #051624;
+  --navy-light: #133c5e;
+  --blue: #08a0df;
+  --blue-light: #e6f6fd;
+  --lime: #8bc31f;
+  --lime-light: #f2f9e8;
+  --gold: #f5b301;
+  --ink: #101820;
+  --ink-secondary: #425466;
+  --ink-muted: #6b7c8c;
+  --paper: #ffffff;
+  --bg-subtle: #f5f8fa;
+  --border-subtle: #e2ebef;
+  --border-line: #d8e2e8;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background-color: #dbe4ea;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   TOOLBAR SUPERIOR DE NAVEGACIÓN Y EXPORTACIÓN
+   ========================================================================== */
+.brochure-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(9, 43, 70, 0.25);
+  border-bottom: 2px solid var(--blue);
+}
+
+.brochure-toolbar .brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brochure-toolbar .brand-logo {
+  height: 28px;
+  width: auto;
+}
+
+.brochure-toolbar .title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.brochure-toolbar .title span {
+  color: var(--blue);
+}
+
+.brochure-toolbar .badge-format {
+  background: rgba(8, 160, 223, 0.2);
+  color: #cbeeff;
+  border: 1px solid rgba(8, 160, 223, 0.4);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.brochure-toolbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  border: none;
+}
+
+.toolbar-btn.btn-primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.toolbar-btn.btn-primary:hover {
+  background: #09b4fb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(8, 160, 223, 0.35);
+}
+
+.toolbar-btn.btn-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2edf5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.toolbar-btn.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+/* ==========================================================================
+   CONTENEDOR DE PÁGINAS TAMAÑO CARTA
+   ========================================================================== */
+.brochure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0 48px;
+}
+
+.sheet {
+  width: 8.5in;
+  height: 11in;
+  min-height: 11in;
+  max-height: 11in;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(9, 43, 70, 0.16);
+  page-break-after: always;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-content {
+  padding: 0.5in 0.65in 0.5in 0.75in;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+/* Franja izquierda de identidad */
+.edge-accent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.16in;
+  background: linear-gradient(180deg, var(--blue) 0%, var(--blue) 60%, var(--lime) 60%, var(--lime) 75%, var(--navy) 75%);
+  z-index: 3;
+}
+
+/* Cabecera estándar de página */
+.sheet-header {
+  margin-bottom: 0.15in;
+  border-bottom: 2px solid var(--border-subtle);
+  padding-bottom: 0.08in;
+  position: relative;
+}
+
+.sheet-header .kicker {
+  font-size: 8pt;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.03in;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sheet-header .kicker::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  background: var(--lime);
+}
+
+.sheet-header h2 {
+  font-size: 22pt;
+  line-height: 1.05;
+  color: var(--navy);
+  margin: 0 0 0.05in;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sheet-header .subtitle {
+  font-size: 9.5pt;
+  color: var(--ink-secondary);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Pie de página estándar */
+.sheet-footer {
+  margin-top: auto;
+  padding-top: 0.08in;
+  border-top: 1px solid var(--border-line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+
+.sheet-footer .brand-link {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.sheet-footer .brand-link span {
+  color: var(--blue);
+}
+
+.sheet-footer .page-number {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   COMPONENTES GRÁFICOS REUTILIZABLES
+   ========================================================================== */
+.card-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.12in;
+}
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.1in;
+}
+
+.card-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.1in;
+}
+
+.info-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius-sm);
+  padding: 0.1in 0.12in;
+}
+
+.info-card.accent-lime {
+  border-left-color: var(--lime);
+}
+
+.info-card h4 {
+  margin: 0 0 0.04in;
+  font-size: 9.5pt;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 8pt;
+  line-height: 1.38;
+  color: var(--ink-secondary);
+}
+
+.metric-box {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--blue);
+  border-radius: var(--radius-sm);
+  padding: 0.12in 0.1in;
+  text-align: center;
+}
+
+.metric-box.accent-lime {
+  border-top-color: var(--lime);
+}
+
+.metric-box .number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20pt;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--navy);
+}
+
+.metric-box .label {
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  margin-top: 0.04in;
+}
+
+.metric-box .detail {
+  font-size: 7pt;
+  color: var(--ink-muted);
+  margin-top: 0.02in;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 0.22in;
+  margin-bottom: 0.06in;
+  font-size: 8.2pt;
+  line-height: 1.35;
+  color: var(--ink-secondary);
+}
+
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.02in;
+  top: 0.05in;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.bullet-list.lime-bullets li::before {
+  background: var(--lime);
+}
+
+/* ==========================================================================
+   PÁGINA 1: PORTADA
+   ========================================================================== */
+.sheet-portada {
+  background: var(--paper);
+}
+
+.portada-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(150deg, #f7fafc 0%, #f0f5f9 45%, #ffffff 45%, #ffffff 100%);
+}
+
+.portada-rings {
+  position: absolute;
+  right: -1.2in;
+  top: -1.2in;
+  width: 4.8in;
+  height: 4.8in;
+  border: 1px solid rgba(8, 160, 223, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.35in rgba(8, 160, 223, 0.05),
+              0 0 0 0.7in rgba(8, 160, 223, 0.03);
+}
+
+.portada-photo-frame {
+  position: absolute;
+  right: 0.65in;
+  top: 4.8in;
+  width: 2.5in;
+  height: 3.6in;
+  background: #fff;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-line);
+  box-shadow: 0 16px 36px rgba(9, 43, 70, 0.18);
+  transform: rotate(1deg);
+  z-index: 1;
+}
+
+.portada-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.portada-logo-box {
+  margin: 0.8in 0 0.5in;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.28in 0.32in;
+  box-shadow: 0 12px 28px rgba(9, 43, 70, 0.08);
+  max-width: 4.5in;
+  display: flex;
+  align-items: center;
+}
+
+.portada-logo-box img {
+  max-width: 100%;
+  height: auto;
+  max-height: 0.85in;
+}
+
+.portada-title {
+  font-size: 26pt;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--navy);
+  max-width: 4.8in;
+  margin: 0 0 0.18in;
+}
+
+.portada-rule {
+  width: 0.9in;
+  height: 4px;
+  background: var(--blue);
+  margin-bottom: 0.2in;
+}
+
+.portada-services {
+  max-width: 4.6in;
+  font-size: 10pt;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  font-weight: 600;
+}
+
+.portada-services .bullet {
+  color: var(--blue);
+  font-weight: 900;
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS DE PÁGINAS TÉCNICAS Y FOTOS
+   ========================================================================== */
+.photo-card {
+  background: #fff;
+  border: 1px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 1.4in;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card .caption {
+  padding: 0.05in 0.08in;
+  background: #fff;
+  font-size: 6.8pt;
+  font-weight: 700;
+  color: var(--navy);
+  border-top: 1px solid var(--border-subtle);
+  line-height: 1.2;
+}
+
+/* Clientes y Muro de Logos */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.1in;
+  margin-bottom: 0.15in;
+}
+
+.client-logo-card {
+  background: #fff;
+  border: 1px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  padding: 0.08in;
+  height: 0.82in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.client-logo-card img {
+  max-width: 85%;
+  max-height: 0.55in;
+  object-fit: contain;
+}
+
+.client-logo-card .name {
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 3px;
+}
+
+/* Tabla de proyectos (Anexo) */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7.2pt;
+  margin-bottom: 0.12in;
+}
+
+.project-table th {
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: left;
+  padding: 0.06in 0.08in;
+  letter-spacing: 0.06em;
+  font-size: 7pt;
+}
+
+.project-table th:last-child {
+  text-align: right;
+}
+
+.project-table td {
+  padding: 0.05in 0.08in;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--ink-secondary);
+}
+
+.project-table tr:nth-child(even) td {
+  background: var(--bg-subtle);
+}
+
+.project-table .client-cell {
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.project-table .year-cell {
+  font-weight: 800;
+  color: var(--blue);
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Contacto y QR */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1in;
+  margin-bottom: 0.12in;
+}
+
+.contact-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--blue);
+  padding: 0.08in 0.1in;
+  border-radius: var(--radius-sm);
+}
+
+.contact-card.accent-lime {
+  border-left-color: var(--lime);
+}
+
+.contact-card .label {
+  font-size: 6.8pt;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0.02in;
+}
+
+.contact-card a, .contact-card span {
+  font-size: 8.5pt;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  color: var(--blue);
+}
+
+.qr-block {
+  display: flex;
+  align-items: center;
+  gap: 0.18in;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.12in 0.18in;
+  border-radius: var(--radius-md);
+  margin-top: 0.05in;
+}
+
+.qr-code {
+  width: 0.85in;
+  height: 0.85in;
+  background: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.qr-code img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.qr-text h4 {
+  margin: 0 0 0.03in;
+  color: var(--blue);
+  font-size: 10pt;
+  font-weight: 800;
+}
+
+.qr-text p {
+  margin: 0;
+  font-size: 7.5pt;
+  line-height: 1.35;
+  color: #d8e5ee;
+}
+
+/* ==========================================================================
+   REGLAS DE IMPRESIÓN Y EXPORTACIÓN A PDF EXACTA EN TAMAÑO CARTA
+   ========================================================================== */
+@page {
+  size: letter portrait; /* 8.5in x 11in exacto */
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 8.5in;
+    height: 11in;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .brochure-toolbar {
+    display: none !important;
+  }
+
+  .brochure-container {
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  .sheet {
+    width: 8.5in !important;
+    height: 11in !important;
+    min-height: 11in !important;
+    max-height: 11in !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    break-after: page !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE PARA DISPOSITIVOS MÓVILES EN VISTA WEB
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+  .brochure-container {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .sheet {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    aspect-ratio: 8.5 / 11;
+  }
+
+  .sheet-content {
+    padding: 4% 5% 4% 6%;
+  }
+
+  .portada-title {
+    font-size: clamp(18px, 4.5vw, 28px);
+  }
+
+  .sheet-header h2 {
+    font-size: clamp(16px, 4vw, 24px);
+  }
+}
