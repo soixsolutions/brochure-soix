@@ -182,6 +182,10 @@
   color: #fff !important;
 }
 
+.maintenance-sheet .sheet-footer .page-number {
+  color: #fff !important;
+}
+
 .automation-sheet {
   background: var(--navy);
 }
@@ -276,6 +280,10 @@
 
 .automation-sheet .sheet-footer,
 .automation-sheet .page-number span {
+  color: #fff !important;
+}
+
+.automation-sheet .sheet-footer .page-number {
   color: #fff !important;
 }
 
@@ -2279,6 +2287,526 @@ h1, h2, h3, h4, .font-heading {
     min-height: 3in;
   }
 }
+/* PÁGINA 12 · SECTORES ARRIBA Y MAPA EN TEMA OSCURO */
+#page-12 .sheet-header {
+  margin-bottom: 0.1in;
+}
+
+#page-12 .sector-coverage-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12in;
+  flex: 1 1 auto;
+}
+
+#page-12 .sector-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.07in 0.1in;
+}
+
+#page-12 .sector-cards .info-card {
+  padding: 0.065in 0.1in;
+}
+
+#page-12 .sector-cards .info-card h4 {
+  font-size: 7.8pt;
+}
+
+#page-12 .sector-cards .info-card p {
+  font-size: 6.65pt;
+  line-height: 1.2;
+}
+
+#page-12 .coverage-theme-dark {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0.1in 0.14in 0.08in;
+  border: 1px solid rgba(8, 160, 223, 0.3);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  background: linear-gradient(135deg, var(--navy) 0%, #0d3455 100%);
+  box-shadow: 0 5px 16px rgba(5, 22, 36, 0.18);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+#page-12 .coverage-panel-heading {
+  align-items: center;
+  padding-bottom: 0.06in;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+#page-12 .coverage-panel-heading .kicker {
+  color: #9de7ff;
+}
+
+#page-12 .coverage-panel-heading h3 {
+  color: #fff;
+}
+
+#page-12 .coverage-count {
+  color: #d8f1fc;
+  background: rgba(8, 160, 223, 0.18);
+  border: 1px solid rgba(8, 160, 223, 0.4);
+}
+
+#page-12 .coverage-count span {
+  color: #a9c6dc;
+}
+
+#page-12 .coverage-body-horizontal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(1.65in, 0.9fr);
+  align-items: center;
+  gap: 0.12in;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#page-12 .coverage-map {
+  min-height: 2.1in;
+  height: 100%;
+  padding: 0.02in;
+}
+
+#page-12 .mexico-coverage-svg {
+  max-height: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.2));
+}
+
+#page-12 .mexico-coverage-svg .map-state {
+  stroke-width: 1.1;
+  stroke: var(--navy-dark);
+}
+
+#page-12 .mexico-coverage-svg .state-inactive {
+  fill: #143854;
+}
+
+#page-12 .mexico-coverage-svg .state-active {
+  fill: var(--blue);
+  stroke: var(--navy-dark);
+  filter: drop-shadow(0 0 3px rgba(8, 160, 223, 0.35));
+}
+
+#page-12 .mexico-coverage-svg .state-hq {
+  fill: var(--lime) !important;
+  stroke: var(--navy-dark) !important;
+  filter: drop-shadow(0 0 6px rgba(139, 195, 31, 0.5)) !important;
+}
+
+#page-12 .mexico-coverage-svg .route-line {
+  stroke: var(--blue);
+  stroke-width: 1.1;
+  stroke-dasharray: 4, 3;
+  opacity: 0.65;
+}
+
+#page-12 .coverage-side-legend {
+  min-width: 0;
+}
+
+#page-12 .coverage-legend {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.035in;
+  padding-top: 0;
+  border-top: 0;
+}
+
+#page-12 .coverage-legend-item {
+  padding: 0.025in 0.04in 0.025in 0.14in;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 2px solid var(--blue);
+  border-radius: 2px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 6.1pt;
+  line-height: 1.12;
+}
+
+#page-12 .coverage-legend-item::before {
+  top: 50%;
+  left: 0.045in;
+  width: 0.055in;
+  height: 0.055in;
+  transform: translateY(-50%);
+}
+
+#page-12 .coverage-legend-item.is-headquarters {
+  grid-column: auto;
+  border-left-color: var(--lime);
+  background: rgba(139, 195, 31, 0.14);
+}
+
+#page-12 .coverage-legend-item.is-headquarters::before {
+  top: 50%;
+  left: 0.045in;
+}
+
+#page-12 .coverage-legend-item small {
+  color: #a9c6dc;
+  font-size: 5.4pt;
+}
+
+#page-12 .coverage-map-note {
+  margin-top: 0.06in;
+  color: #8fb1cb;
+  font-size: 5.4pt;
+}
+
+@media screen and (max-width: 900px) {
+  #page-12 .coverage-body-horizontal {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #page-12 .coverage-map {
+    min-height: 2.6in;
+  }
+
+  #page-12 .coverage-legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #page-12 .coverage-legend-item.is-headquarters {
+    grid-column: 1 / -1;
+  }
+}
+
+/* PÁGINA 13 · CASO SCRIBE A SANGRE COMPLETA */
+.success-scribe-sheet {
+  overflow: hidden;
+  background: var(--navy-dark);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.success-scribe-photo-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  background: #fff;
+}
+
+.success-scribe-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--navy-dark);
+}
+
+.success-scribe-photo::after {
+  position: absolute;
+  inset: 35% 0 0;
+  content: "";
+  background: linear-gradient(180deg, transparent 8%, rgba(5, 22, 36, 0.25) 35%, rgba(5, 22, 36, 0.92) 100%);
+  pointer-events: none;
+}
+
+.success-scribe-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+}
+
+.success-scribe-photo figcaption {
+  position: absolute;
+  right: 0.28in;
+  bottom: 0.72in;
+  left: 0.28in;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.07in;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.success-scribe-photo .project-client {
+  margin: 0;
+}
+
+.success-scribe-photo figcaption strong {
+  max-width: 3.6in;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15pt;
+  font-weight: 900;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.success-scribe-heading {
+  position: absolute;
+  top: 0.45in;
+  left: 0.55in;
+  z-index: 2;
+  max-width: 5.9in;
+  padding: 0.14in 0.18in 0.16in;
+  border-left: 4px solid var(--lime);
+  border-radius: 2px;
+  color: #fff;
+  background: linear-gradient(100deg, rgba(5, 22, 36, 0.92), rgba(5, 22, 36, 0.62));
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+}
+
+.success-scribe-heading .kicker {
+  margin: 0 0 0.07in;
+  color: #9de7ff;
+  font-size: 7pt;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.success-scribe-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 20pt;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.success-scribe-heading p {
+  margin: 0.06in 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 8pt;
+  line-height: 1.3;
+}
+
+.success-scribe-footer {
+  position: absolute;
+  right: 0.55in;
+  bottom: 0.18in;
+  left: 0.55in;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.12in;
+  padding-top: 0.07in;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 7pt;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+}
+
+@media screen and (max-width: 900px) {
+  .success-scribe-heading {
+    top: 4%;
+    right: 5%;
+    left: 5%;
+    max-width: none;
+  }
+
+  .success-scribe-photo figcaption {
+    right: 0.12in;
+    bottom: 0.58in;
+    left: 0.12in;
+  }
+
+  .success-scribe-photo figcaption strong {
+    font-size: clamp(8px, 2.3vw, 15pt);
+  }
+
+  .success-scribe-footer {
+    right: 5%;
+    bottom: 2%;
+    left: 5%;
+    font-size: 5.5pt;
+  }
+}
+
+/* PÁGINA 13 · CASOS EXISTENTES Y FOTOGRAFÍAS SCRIBE */
+.success-cases-sheet .sheet-content {
+  padding: 0.38in 0.48in 0.32in 0.58in;
+}
+
+.success-cases-sheet .sheet-header {
+  flex: 0 0 auto;
+  margin-bottom: 0.08in;
+  padding-bottom: 0.06in;
+}
+
+.success-cases-sheet .sheet-header h2 {
+  margin-bottom: 0.025in;
+  font-size: 17pt;
+  line-height: 1.06;
+}
+
+.success-cases-sheet .sheet-header .subtitle {
+  font-size: 7.2pt;
+  line-height: 1.2;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.07in;
+  flex: 0 0 auto;
+  margin-bottom: 0.08in;
+}
+
+.case-study-grid .info-card {
+  padding: 0.065in 0.075in;
+}
+
+.case-study-grid .info-card h4 {
+  margin-bottom: 0.025in;
+  font-size: 6.8pt;
+  line-height: 1.12;
+}
+
+.case-study-grid .info-card p {
+  font-size: 6.1pt;
+  line-height: 1.18;
+}
+
+.trust-recurrent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.15in;
+  flex: 0 0 auto;
+  margin-bottom: 0.08in;
+  padding: 0.075in 0.12in;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+
+.trust-recurrent strong {
+  color: var(--lime);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6.7pt;
+  letter-spacing: 0.13em;
+}
+
+.trust-recurrent p {
+  margin: 0.02in 0;
+  color: #fff;
+  font-size: 7.1pt;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.trust-recurrent small {
+  color: #cbdbe6;
+  font-size: 6pt;
+  line-height: 1.15;
+}
+
+.trust-recurrent > b {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23pt;
+  font-weight: 900;
+}
+
+.scribe-test-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+  gap: 0.1in;
+  flex: 1 1 auto;
+  min-height: 2.6in;
+}
+
+.scribe-test-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  border-bottom: 3px solid var(--lime);
+  background: var(--navy-dark);
+  box-shadow: 0 3px 10px rgba(9, 43, 70, 0.18);
+}
+
+.scribe-test-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+}
+
+.scribe-test-photo::after {
+  position: absolute;
+  inset: 45% 0 0;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(5, 22, 36, 0.9));
+  pointer-events: none;
+}
+
+.scribe-test-photo figcaption {
+  position: absolute;
+  right: 0.14in;
+  bottom: 0.15in;
+  left: 0.14in;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.045in;
+  color: #fff;
+}
+
+.scribe-test-photo .project-client {
+  margin: 0;
+  padding: 0.035in 0.07in;
+  font-size: 6pt;
+}
+
+.scribe-test-photo figcaption strong {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.success-cases-sheet .sheet-footer {
+  flex: 0 0 auto;
+  margin-top: 0.08in;
+  font-size: 6.4pt;
+}
+
+@media screen and (max-width: 900px) {
+  .success-cases-sheet {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .success-cases-sheet .sheet-content {
+    height: auto;
+  }
+
+  .case-study-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .scribe-test-photo-grid {
+    min-height: 4.2in;
+  }
+}
+
 @page {
   size: letter portrait; /* 8.5in x 11in exacto */
   margin: 0;
