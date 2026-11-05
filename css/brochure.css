@@ -2807,6 +2807,103 @@ h1, h2, h3, h4, .font-heading {
   }
 }
 
+.company-logo-background-sheet {
+  background: var(--navy-dark);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.company-logo-background-sheet::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(5, 22, 36, 0.68), rgba(5, 22, 36, 0.78)),
+    url("../Logos%20SOIX/JPG%20FONDO%20NEGRO/SOIX-02.jpg") center / cover no-repeat;
+}
+
+.company-logo-background-sheet .sheet-header {
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.company-logo-background-sheet .sheet-header .kicker {
+  color: #9de7ff;
+}
+
+.company-logo-background-sheet .sheet-header h2,
+.company-logo-background-sheet .sheet-header .subtitle {
+  color: #fff;
+}
+
+.company-logo-background-sheet .sheet-content > div[style*="font-family"] {
+  color: #9de7ff !important;
+}
+
+.company-logo-background-sheet .sheet-footer {
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #fff;
+}
+
+.company-logo-background-sheet .sheet-footer .page-number {
+  color: #fff;
+}
+
+.contact-background-sheet {
+  background: var(--navy-dark);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.contact-background-sheet::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(5, 22, 36, 0.62), rgba(5, 22, 36, 0.78)),
+    url("../GALERIA/Maquinaria/Maquinaria%201.jpeg") 58% center / cover no-repeat;
+}
+
+.contact-background-sheet .sheet-header {
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.contact-background-sheet .sheet-header .kicker {
+  color: #9de7ff;
+}
+
+.contact-background-sheet .sheet-header h2,
+.contact-background-sheet .sheet-header .subtitle {
+  color: #fff;
+}
+
+.contact-background-sheet .sheet-content > div[style*="font-family"] {
+  color: #9de7ff !important;
+}
+
+.contact-background-sheet .project-table td {
+  border-color: var(--border-subtle);
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+.contact-background-sheet .contact-card {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.contact-background-sheet .qr-block {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+.contact-background-sheet .sheet-footer {
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #fff;
+}
+
+.contact-background-sheet .sheet-footer .page-number {
+  color: #fff;
+}
+
 @page {
   size: letter portrait; /* 8.5in x 11in exacto */
   margin: 0;
