@@ -84,3 +84,4 @@ if ((Test-Path $outputPath) -and ((Get-Item $outputPath).Length -gt 10KB)) {
 
 Write-Host ""
 pause
+
