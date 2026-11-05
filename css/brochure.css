@@ -35,7 +35,7 @@
   content: "";
   background:
     linear-gradient(135deg, rgba(9, 43, 70, 0.82), rgba(9, 43, 70, 0.66)),
-    url("../GALERIA/Hidrapulper%20y%20l%C3%ADnea%20de%20proceso%20en%20acero%20Inoxidable%20Scribe/74Hidrapulper%20y%20l%C3%ADnea%20de%20proceso%20en%20acero%20Inoxidable%20Scribe.jpeg") center / cover no-repeat;
+    url("../GALERIA/hidrapulper.jpeg") center / cover no-repeat;
 }
 
 .maintenance-sheet .sheet-header {
@@ -277,6 +277,397 @@
 .automation-sheet .sheet-footer,
 .automation-sheet .page-number span {
   color: #fff !important;
+}
+
+.construction-sheet {
+  background: var(--navy);
+}
+
+.construction-sheet::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(9, 43, 70, 0.82), rgba(9, 43, 70, 0.68)),
+    url("../GALERIA/civil.jpeg") center / cover no-repeat;
+}
+
+.construction-sheet .sheet-header {
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.construction-sheet .sheet-header .kicker {
+  color: #9de7ff;
+}
+
+.construction-sheet .sheet-header h2 {
+  color: #fff;
+}
+
+.construction-sheet .sheet-header .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.construction-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.14in;
+  margin-bottom: 0.16in;
+}
+
+.construction-project {
+  position: relative;
+  height: 2.75in;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.86);
+  border-radius: 4px;
+  background: var(--navy);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.24);
+}
+
+.construction-project::after {
+  position: absolute;
+  inset: 38% 0 0;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(5, 19, 32, 0.94));
+}
+
+.construction-project img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.construction-project figcaption {
+  position: absolute;
+  right: 0.14in;
+  bottom: 0.13in;
+  left: 0.14in;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.construction-project figcaption .project-client {
+  text-shadow: none;
+}
+
+.construction-project h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 9pt;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.construction-solutions-panel {
+  padding: 0.16in 0.18in 0.14in;
+  border-top: 3px solid var(--lime);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
+}
+
+.construction-solutions-panel > h3 {
+  margin: 0 0 0.12in;
+  color: var(--navy);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9pt;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.construction-solutions-grid {
+  gap: 0.16in;
+  margin-bottom: 0.12in;
+}
+
+.construction-solutions-grid .bullet-list li {
+  margin-bottom: 0.08in;
+  font-size: 7.5pt;
+  line-height: 1.3;
+}
+
+.construction-equipment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.14in;
+  padding: 0.1in 0.12in;
+  border-left: 3px solid var(--blue);
+  background: var(--bg-subtle);
+}
+
+.construction-equipment strong {
+  display: block;
+  color: var(--navy);
+  font-size: 8pt;
+}
+
+.construction-equipment p {
+  margin: 0.025in 0 0;
+  color: var(--ink-secondary);
+  font-size: 7pt;
+  line-height: 1.25;
+}
+
+.construction-equipment > span {
+  color: var(--blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20pt;
+  font-weight: 900;
+}
+
+.construction-sheet .sheet-footer,
+.construction-sheet .page-number span {
+  color: #fff !important;
+}
+
+.scribe-case-sheet {
+  background: var(--paper);
+}
+
+.scribe-case-content {
+  padding: 0.34in 0.48in 0.32in 0.62in;
+}
+
+.scribe-case-header {
+  position: relative;
+  margin-bottom: 0.1in;
+  padding-bottom: 0.08in;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.scribe-case-header .kicker {
+  margin-bottom: 0.05in;
+  color: var(--blue);
+  font-size: 7pt;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scribe-case-header .project-client {
+  margin: 0 0 0.06in;
+}
+
+.scribe-case-header h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 17pt;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.scribe-opening {
+  margin: 0 0 0.12in;
+  color: var(--ink-secondary);
+  font-size: 8pt;
+  line-height: 1.32;
+}
+
+.scribe-case-section {
+  margin-bottom: 0.12in;
+}
+
+.scribe-section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.1in;
+  margin-bottom: 0.045in;
+}
+
+.scribe-section-heading > span {
+  color: var(--lime);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15pt;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.scribe-section-heading h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.scribe-section-copy {
+  margin: 0 0 0.08in;
+  color: var(--ink-secondary);
+  font-size: 7.3pt;
+  line-height: 1.28;
+}
+
+.scribe-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.13in;
+}
+
+.scribe-photo {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-left: 4px solid var(--lime);
+  border-radius: 2px;
+  background: #fff;
+}
+
+.scribe-photo img {
+  display: block;
+  width: 100%;
+  height: 2.05in;
+  object-fit: cover;
+  object-position: center;
+}
+
+.scribe-photo figcaption {
+  min-height: 0.28in;
+  padding: 0.055in 0.08in;
+  color: var(--navy);
+  background: var(--bg-subtle);
+  font-size: 6.5pt;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.scribe-management {
+  margin: 0 0 0.12in;
+  padding: 0.1in 0.14in;
+  border-left: 4px solid var(--lime);
+  border-radius: 2px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.scribe-management .scribe-section-heading {
+  margin-bottom: 0.035in;
+}
+
+.scribe-management .scribe-section-heading h3 {
+  color: var(--navy);
+}
+
+.scribe-management p {
+  margin: 0 0 0.08in;
+  color: var(--ink-secondary);
+  font-size: 7pt;
+  line-height: 1.25;
+}
+
+.scribe-management ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.08in;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scribe-management li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.05in;
+  color: var(--navy);
+  font-size: 6.3pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.scribe-management li span {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 9pt;
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+.scribe-case-close {
+  margin-top: auto;
+  padding: 0.08in 0.12in;
+  border-left: 4px solid var(--lime);
+  color: var(--navy);
+  background: var(--lime);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8pt;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.scribe-case-sheet .sheet-footer {
+  margin-top: auto;
+  padding-top: 0.08in;
+  border-color: var(--border-line);
+  color: var(--ink-muted);
+}
+
+.scribe-case-sheet .page-number {
+  color: var(--navy) !important;
+}
+
+.scribe-case-sheet .page-number span {
+  color: var(--blue) !important;
+}
+
+.engineering-sheet {
+  background: var(--navy);
+}
+
+.engineering-sheet::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(9, 43, 70, 0.78), rgba(9, 43, 70, 0.66)),
+    url("../GALERIA/NESTLE/NESTLE_2.jpeg") center / cover no-repeat;
+}
+
+.engineering-sheet .sheet-header {
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.engineering-sheet .sheet-header .kicker {
+  color: #9de7ff;
+}
+
+.engineering-sheet .sheet-header h2 {
+  color: #fff;
+}
+
+.engineering-sheet .sheet-header .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.engineering-services-heading {
+  padding: 0.08in 0.1in;
+  color: #fff;
+  background: rgba(9, 43, 70, 0.72);
+}
+
+.engineering-sheet .sheet-footer {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.engineering-sheet .page-number {
+  color: #fff;
+}
+
+.engineering-sheet .page-number span {
+  color: var(--blue) !important;
 }
 
 * {
@@ -1658,6 +2049,236 @@ h1, h2, h3, h4, .font-heading {
 /* ==========================================================================
    REGLAS DE IMPRESIÓN Y EXPORTACIÓN A PDF EXACTA EN TAMAÑO CARTA
    ========================================================================== */
+/* PÁGINA 12 · SECTORES Y COBERTURA */
+#page-12 .sheet-header {
+  margin-bottom: 0.12in;
+}
+
+.sector-coverage-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: stretch;
+  gap: 0.16in;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.sector-list,
+.coverage-panel {
+  min-width: 0;
+  min-height: 0;
+}
+
+.sector-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.07in;
+}
+
+.sector-cards .info-card {
+  padding: 0.075in 0.1in;
+}
+
+.sector-cards .info-card h4 {
+  margin-bottom: 0.025in;
+  font-size: 8pt;
+  line-height: 1.12;
+}
+
+.sector-cards .info-card p {
+  font-size: 6.9pt;
+  line-height: 1.25;
+}
+
+.coverage-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0.12in 0.14in 0.1in;
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--blue);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, #f8fbfc 0%, #fff 62%);
+}
+
+.coverage-panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.08in;
+  padding-bottom: 0.07in;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.coverage-panel-heading .kicker {
+  color: var(--blue);
+  font-size: 5.8pt;
+  letter-spacing: 0.12em;
+}
+
+.coverage-panel-heading h3 {
+  margin: 0.025in 0 0;
+  color: var(--navy);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.coverage-count {
+  flex: 0 0 auto;
+  padding: 0.055in 0.08in;
+  border-radius: 20px;
+  background: var(--blue-light);
+  color: var(--navy);
+  font-size: 6.2pt;
+  font-weight: 800;
+  text-align: center;
+}
+
+.coverage-count span {
+  display: block;
+  color: var(--ink-secondary);
+  font-size: 5.4pt;
+}
+
+.coverage-map {
+  display: grid;
+  place-items: center;
+  flex: 1 1 auto;
+  min-height: 2.45in;
+  margin: 0;
+  padding: 0.04in 0;
+}
+
+.mexico-coverage-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 3.2in;
+  overflow: visible;
+}
+
+.mexico-coverage-svg .map-state {
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+  stroke: #fff;
+}
+
+.mexico-coverage-svg .state-inactive {
+  fill: #e3ebef;
+}
+
+.mexico-coverage-svg .state-active {
+  fill: var(--blue);
+}
+
+.mexico-coverage-svg .state-hq {
+  fill: var(--lime) !important;
+  stroke: #fff !important;
+  stroke-width: 2 !important;
+}
+
+.coverage-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.035in 0.06in;
+  padding-top: 0.08in;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.coverage-legend-item {
+  position: relative;
+  min-width: 0;
+  padding-left: 0.12in;
+  color: var(--navy);
+  font-size: 6pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.coverage-legend-item::before {
+  position: absolute;
+  top: 0.025in;
+  left: 0;
+  width: 0.065in;
+  height: 0.065in;
+  border-radius: 50%;
+  background: var(--blue);
+  content: "";
+}
+
+.coverage-legend-item.is-headquarters {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.06in;
+  padding: 0.045in 0.07in 0.045in 0.18in;
+  border-radius: 2px;
+  background: var(--lime-light);
+}
+
+.coverage-legend-item.is-headquarters::before {
+  top: 50%;
+  left: 0.07in;
+  background: var(--lime);
+  transform: translateY(-50%);
+}
+
+.coverage-legend-item small {
+  color: var(--ink-secondary);
+  font-size: 5.4pt;
+  font-weight: 600;
+  text-align: right;
+}
+
+.coverage-map-note {
+  display: flex;
+  align-items: center;
+  gap: 0.055in;
+  margin-top: 0.07in;
+  color: var(--ink-muted);
+  font-size: 5.7pt;
+  font-weight: 600;
+}
+
+.coverage-map-note > span {
+  width: 0.07in;
+  height: 0.07in;
+  flex: 0 0 0.07in;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+@media screen and (max-width: 900px) {
+  #page-12 {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  #page-12 .sheet-content {
+    height: auto;
+  }
+
+  .sector-coverage-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sector-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coverage-panel {
+    min-height: 6in;
+  }
+
+  .coverage-map {
+    min-height: 3in;
+  }
+}
 @page {
   size: letter portrait; /* 8.5in x 11in exacto */
   margin: 0;
