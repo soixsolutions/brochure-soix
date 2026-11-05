@@ -182,6 +182,103 @@
   color: #fff !important;
 }
 
+.automation-sheet {
+  background: var(--navy);
+}
+
+.automation-sheet::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(9, 43, 70, 0.84), rgba(9, 43, 70, 0.7)),
+    url("../GALERIA/BROMELIAS/SUM%20Y%20REEM%20DE%20ARRANCA%20PARA%20VENT%20DE%20INV%20EUROPERO_2.jpeg") center 42% / cover no-repeat;
+}
+
+.automation-sheet .sheet-header {
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.automation-sheet .sheet-header .kicker {
+  color: #9de7ff;
+}
+
+.automation-sheet .sheet-header h2 {
+  color: #fff;
+}
+
+.automation-sheet .sheet-header .subtitle {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.automation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12in;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.automation-item {
+  display: grid;
+  grid-template-columns: 1.02in minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 1.48in;
+  overflow: hidden;
+  border-left: 3px solid var(--lime);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.automation-item > img {
+  display: block;
+  width: 1.02in;
+  height: 100%;
+  min-height: 1.48in;
+  object-fit: cover;
+  object-position: center;
+}
+
+.automation-item-content {
+  display: grid;
+  grid-template-columns: 0.42in minmax(0, 1fr);
+  align-items: start;
+  gap: 0.1in;
+  padding: 0.14in 0.18in;
+}
+
+.automation-item-content > span {
+  color: var(--blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16pt;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.automation-item h3 {
+  margin: 0 0 0.06in;
+  color: var(--navy);
+  font-size: 10pt;
+  font-weight: 800;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.automation-item p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 8pt;
+  line-height: 1.35;
+}
+
+.automation-sheet .sheet-footer,
+.automation-sheet .page-number span {
+  color: #fff !important;
+}
+
 * {
   box-sizing: border-box;
 }
